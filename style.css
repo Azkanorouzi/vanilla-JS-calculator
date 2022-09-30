@@ -5,6 +5,18 @@
   box-sizing: border-box;
   font-weight: 700;
 }
+/* ======= font ======= */
+@font-face {
+  font-family: "League Spartan";
+  src: url(fonts/LeagueSpartan-VariableFont_wght.ttf);
+  font-weight: 700;
+}
+body {
+  font-size: var(--font-default-size);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight);
+  color: var(--default-text-color);
+}
 /* ======= colors ======= */
 :root {
   /* Font */
@@ -48,13 +60,6 @@
   --tertiary-button-text: hsl(52, 100%, 62%);
   /* Font size */
 }
-/* ======= font ======= */
-body {
-  font-size: var(--font-default-size);
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight);
-  color: var(--default-text-color);
-}
 /* ======= main ======= */
 main {
   width: 100vw;
@@ -86,8 +91,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
-  width: 85vw;
-  max-width: 500px;
+  width: 90vw;
+  max-width: 500px; 
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 15px;
 }
 /* ======= Calc header  ======= */
 .calculator-header {
@@ -115,6 +123,7 @@ main {
   color: var(--sec-button-text);
 }
 .switch {
+  border: none;
   width: 85px;
   border-radius: 40px;
   padding: 5px;
@@ -165,6 +174,8 @@ main {
 }
 /* Previous calculation */
 .calc-screen .previous-operation {
+  font-size: 16px;
+  margin-bottom: 10px;
   height: 20%;
   opacity: .5;
 }
