@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: change -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Azka norouzi | Calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!--======== Calculator Start ======== -->
+        <article class="calculator">
+          <!-- ======== calc header start ========  -->
+          <section class="calculator-header">
+            <!-- Logo (calc) -->
+            <p class="logo">calc</p>
+            <!-- Background-toggle section -->
+            <!-- TODO: adjust -->
+            <figure class="theme-toggle">
+              <!-- theme toggle title -->
+              <p class="theme-toggle-title">THEME</p>
+              <figcaption>
+                <!-- Background numbers -->
+                <p class="theme-toggle-numbers">1 2 3</p>
+              </figcaption>
+              <label class="switch">
+                <div class="slider"></div>
+              </label>
+            </figure>
+          </section>
+          <!-- ======== calc header end ========  -->
+          <!-- ================================= -->
+          <!-- ======== calc screen start========  -->
+          <section class="calc-screen">
+            <!-- mathematical operations -->
+            <p class="previous-operation"></p>
+            <p class="current-operation"></p>
+          </section>
+          <!-- ======== calc screen end========  -->
+          <!-- ================================  -->
+          <!-- ======== calc keyboard Start========  -->
+          <section class="calc-keyboard">
+            <p data-key="7" class="key">7</p>
+            <p data-key="8" class="key">8</p>
+            <p data-key="9" class="key">9</p>
+            <!-- Del Key-->
+            <p data-key="del" class="key key-del">Del</p>
+            <p data-key="4" class="key">4</p>
+            <p data-key="5" class="key">5</p>
+            <p data-key="6" class="key">6</p>
+            <p data-key="+" class="key">+</p>
+            <p data-key="1" class="key">1</p>
+            <p data-key="2" class="key">2</p>
+            <p data-key="3" class="key">3</p>
+            <p data-key="-" class="key">-</p>
+            <p data-key="." class="key">.</p>
+            <p data-key="0" class="key">0</p>
+            <p data-key="/" class="key">/</p>
+            <p data-key="x" class="key">x</p>
+            <!-- Reset key -->
+            <p data-key="reset" class="key key-reset">Reset</p>
+            <!-- Assign key -->
+            <p data-key="=" class="key key-assign">=</p>
+          </section>
+          <!-- ======== calc keyboard End========  -->
+        </article>
+        <!--======== Calculator End ======== -->
+      </div>
+    </main>
+  </body>
 </html>
