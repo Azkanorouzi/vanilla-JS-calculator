@@ -1,0 +1,45 @@
+/* ======= Defaults ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ======= colors ======= */
+:root {
+  /* First theme */
+  --main-background: hsl(222, 26%, 31%);
+  --main-toggle-keypad: hsl(223, 31%, 20%);
+  --main-screen: hsl(224, 36%, 15%);
+  --main-key: hsl(30, 25%, 89%);
+  --main-key-shadow:hsl(28, 16%, 65%);
+  --main-key-assign: hsl(6, 63%, 50%);
+  --main-key-assign-shadow:hsl(6, 70%, 34%);
+  --main-key-reset-del: hsl(225, 21%, 49%);
+  --main-key-shadow:hsl(224, 28%, 35%);
+  --main-text: hsl(221, 14%, 31%);
+  /* Secondary theme */
+  --sec-background: hsl(0, 0%, 90%);
+  --sec-toggle-keypad: hsl(0, 5%, 81%);
+  --sec-screen: hsl(0, 0%, 93%);
+  --sec-key: hsl(45, 7%, 89%);
+  --sec-key-shadow:hsl(35, 11%, 61%);
+  --sec-key-assign: hsl(25, 98%, 40%);
+  --sec-key-assign-shadow:hsl(25, 99%, 27%);
+  --sec-key-reset-del: hsl(185, 42%, 37%);
+  --sec-key-shadow:hsl(185, 58%, 25%);
+  --sec-text: hsl(60, 10%, 19%);
+  /* tertiary theme */
+  --tertiary-background: hsl(268, 75%, 9%);
+  --tertiary-toggle-keypad: hsl(268, 71%, 12%);
+  --tertiary-screen: hsl(268, 71%, 12%);
+  --tertiary-key: hsl(268, 47%, 21%);
+  --tertiary-key-shadow:hsl(290, 70%, 36%);
+  --tertiary-key-assign: hsl(176, 100%, 44%);
+  --tertiary-key-assign-shadow:hsl(177, 92%, 70%);
+  --tertiary-key-reset-del: hsl(281, 89%, 26%);
+  --tertiary-key-shadow:hsl(285, 91%, 52%);
+  --tertiary-text: hsl(52, 100%, 62%);
+  --tertiary-text-assign: hsl(198, 20%, 13%);
+  --tertiary-text-reset-del: hsl(0, 0%, 100%);
+}
+
