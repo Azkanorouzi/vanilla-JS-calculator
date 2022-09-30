@@ -6,40 +6,151 @@
 }
 /* ======= colors ======= */
 :root {
+  /* Font */
+  --font-primary: 'League Spartan', sans-serif;
+  --font-weight: 700;
+  --font-default-size: 14px;
+  /* Text color */
+  --default-text-color: hsl(0, 0%, 100%);
   /* First theme */
   --main-background: hsl(222, 26%, 31%);
   --main-toggle-keypad: hsl(223, 31%, 20%);
   --main-screen: hsl(224, 36%, 15%);
   --main-key: hsl(30, 25%, 89%);
   --main-key-shadow:hsl(28, 16%, 65%);
-  --main-key-assign: hsl(6, 63%, 50%);
-  --main-key-assign-shadow:hsl(6, 70%, 34%);
+  --main-key-assign-slider: hsl(6, 63%, 50%);
+  --main-key-assign-slider-shadow:hsl(6, 70%, 34%);
   --main-key-reset-del: hsl(225, 21%, 49%);
   --main-key-shadow:hsl(224, 28%, 35%);
-  --main-text: hsl(221, 14%, 31%);
+  --main-button-text: hsl(221, 14%, 31%);
   /* Secondary theme */
   --sec-background: hsl(0, 0%, 90%);
   --sec-toggle-keypad: hsl(0, 5%, 81%);
   --sec-screen: hsl(0, 0%, 93%);
   --sec-key: hsl(45, 7%, 89%);
   --sec-key-shadow:hsl(35, 11%, 61%);
-  --sec-key-assign: hsl(25, 98%, 40%);
-  --sec-key-assign-shadow:hsl(25, 99%, 27%);
+  --sec-key-assign-slider: hsl(25, 98%, 40%);
+  --sec-key-assign-slider-shadow:hsl(25, 99%, 27%);
   --sec-key-reset-del: hsl(185, 42%, 37%);
   --sec-key-shadow:hsl(185, 58%, 25%);
-  --sec-text: hsl(60, 10%, 19%);
+  --sec-button-text: hsl(60, 10%, 19%);
   /* tertiary theme */
   --tertiary-background: hsl(268, 75%, 9%);
   --tertiary-toggle-keypad: hsl(268, 71%, 12%);
   --tertiary-screen: hsl(268, 71%, 12%);
   --tertiary-key: hsl(268, 47%, 21%);
   --tertiary-key-shadow:hsl(290, 70%, 36%);
-  --tertiary-key-assign: hsl(176, 100%, 44%);
-  --tertiary-key-assign-shadow:hsl(177, 92%, 70%);
+  --tertiary-key-assign-slider: hsl(176, 100%, 44%);
+  --tertiary-key-assign-slider-shadow:hsl(177, 92%, 70%);
   --tertiary-key-reset-del: hsl(281, 89%, 26%);
   --tertiary-key-shadow:hsl(285, 91%, 52%);
-  --tertiary-text: hsl(52, 100%, 62%);
-  --tertiary-text-assign: hsl(198, 20%, 13%);
-  --tertiary-text-reset-del: hsl(0, 0%, 100%);
+  --tertiary-button-text: hsl(52, 100%, 62%);
+  /* Font size */
 }
-
+/* ======= font ======= */
+body {
+  font-size: var(--font-default-size);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight);
+  color: var(--default-text-color);
+}
+/* ======= main ======= */
+main {
+  width: 100vw;
+  height: 100vh;
+}
+/* ======= Container  ======= */
+/* main theme */
+.container.main-theme {
+  background: var(--main-background);
+}
+/* sec theme */
+.container.sec-theme {
+  background: var(--sec-background);
+}
+/* tertiary theme */
+.container.tertiary-theme{
+  background: var(--tertiary-background);
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+/* ======= Calc container  ======= */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 85vw;
+}
+/* ======= Calc header  ======= */
+.calculator-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* ======= Theme toggle ======= */
+.theme-toggle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+/* title (calc) */
+.theme-toggle-title {
+  font-size: 2rem;
+}
+/* theme text (theme) */
+.theme-text {
+  margin-top: 30px;
+}
+.switch {
+  width: 85px;
+  border-radius: 40px;
+  padding: 5px;
+  height: 30px;
+  margin-top: 8px;
+}
+/* main theme */
+.switch.main-theme {
+  background: var(--main-toggle-keypad);
+}
+/* sec theme */
+.switch.sec-theme {
+  background: var(--sec-toggle-keypad);
+}
+/* tertiary theme */
+.switch.tertiary-theme{
+  background: var(--tertiary-toggle-keypad);
+}
+/* numbers */
+.theme-toggle-numbers {
+  display: flex;
+  justify-content: space-around;
+}
+/* slider */
+.slider {
+  width: 20px;
+  width: 20px;
+  height: 100%;
+  border-radius: 50%;
+}
+.slider.main-theme {
+  background: var(--main-key-assign-slider);
+}
+.slide.sec-theme {
+  background: var(--sec-key-assign-slider);
+}
+.slide.sec-theme {
+  background: var(--tertiary-key-assign-slider);
+}
+/* ======= Screen ======= */
+.calc-screen {
+  width: 100%;
+  height: 130px;
+  border-radius: 15px;
+  background: var(--main-);
+}
