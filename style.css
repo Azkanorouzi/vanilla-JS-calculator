@@ -44,7 +44,7 @@
   --tertiary-key-assign-slider: hsl(176, 100%, 44%);
   --tertiary-key-assign-slider-shadow:hsl(177, 92%, 70%);
   --tertiary-key-reset-del: hsl(281, 89%, 26%);
-  --tertiary-key-reset-shadow:hsl(285, 91%, 52%);
+  --tertiary-key-reset-del-shadow:hsl(285, 91%, 52%);
   --tertiary-button-text: hsl(52, 100%, 62%);
   /* Font size */
 }
@@ -148,10 +148,10 @@ main {
 .slider.main-theme {
   background: var(--main-key-assign-slider);
 }
-.slide.sec-theme {
+.slider.sec-theme {
   background: var(--sec-key-assign-slider);
 }
-.slide.sec-theme {
+.slider.tertiary-theme {
   background: var(--tertiary-key-assign-slider);
 }
 /* ======= Screen ======= */
@@ -268,7 +268,7 @@ main {
 .calc-keyboard.tertiary-theme>.key {
   background: var(--tertiary-key);
   box-shadow: 0px 5px 0px 0px var(--tertiary-key-shadow);
-  color: var(--sec-button-text);
+  color: var(--tertiary-button-text);
 }
 .calc-keyboard.tertiary-theme>.key-reset,
 .calc-keyboard.tertiary-theme>.key-del {
@@ -278,7 +278,7 @@ main {
 }
 .calc-keyboard.tertiary-theme>.key-assign {
   font-size: 24px;
-  color: var(--default-text-color);
+  color: var(--tertiary-background);
   background: var(--tertiary-key-assign-slider);
     box-shadow: 0px 5px 0px 0px var(--tertiary-key-assign-slider-shadow);
 }
