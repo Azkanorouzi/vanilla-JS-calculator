@@ -1,4 +1,4 @@
-![preview](ScreenShot.png)
+![preview](./ScreenShot.png)
 
 ## Hello! 👋
 
