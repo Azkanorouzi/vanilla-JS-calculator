@@ -1,3 +1,4 @@
+'use strict'
 /* ============== Themes ============== */
 const btnSwitch = document.querySelector('button.switch');
 const slider = document.querySelector('.slider')
@@ -32,11 +33,54 @@ const keys = document.querySelectorAll('.key')
 /* Calculator screen */
 const preOperationEl = document.querySelector('.previous-operation');
 const currentOperationEl = document.querySelector('.current-operation');
+let operation;
 let preOperation ;
 let currentOperation;
+let lastKeyIndex;
+let lastKey;
 /* Keys click event */
+let clickedKeyName;
 keys.forEach(key => {
   key.addEventListener('click', () => {
-    console.log(key.dataset.key);
+    clickedKeyName = key.dataset.keyname;
+    lastKeyIndex = currentOperationEl.textContent.length - 1;
+    lastKey = currentOperationEl.textContent[lastKeyIndex];
+    populateScreen(clickedKeyName);
   })
 })
+// Populate the screen with keys that are clicked
+function populateScreen(clickedKey) {
+  // If user enters more than allowed numbers
+  if (currentOperationEl.textContent.length > 9) {
+    currentOperationEl.style.fontSize = "2rem";
+  }
+  if (currentOperationEl.textContent.length > 15) {
+    currentOperationEl.textContent = currentOperationEl.textContent.slice(0,-1);
+  }
+  // When user enters more than
+  if (clickedKey === '*' || clickedKey === '+' || clickedKey === '-' || clickedKey === '/' || clickedKey === '=') {
+
+    /* Not allowing to have more than one operation in a row */
+    if (lastKey !== ' ') {
+      // Adding to pre operation
+      preOperationEl.textContent += `${currentOperationEl.textContent} ${clickedKey}`;
+      /* clearing out the pre operation */
+      currentOperationEl.textContent = " ";
+    }
+    operation = preOperationEl.textContent.split(" ");
+    if (clickedKey === '=') {
+      operation.pop();
+      console.log(operation);
+    }
+  }
+  /* When user hits = */
+  /* When user hits del button */
+  else if (clickedKey === 'del') {
+    currentOperationEl.textContent = currentOperationEl.textContent.slice(0,-1);
+  }
+  else {
+    currentOperationEl.textContent += clickedKey;
+    number
+  }
+}
+

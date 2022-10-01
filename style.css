@@ -188,6 +188,7 @@ main {
 .calc-screen .current-operation {
   height: 80%;
   font-size: 3rem;
+  direction: ltr;
 }
 /* main theme */
 .calc-screen.main-theme {
