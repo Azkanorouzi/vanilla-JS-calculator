@@ -55,9 +55,7 @@ function populateScreen(clickedKey) {
   if (currentOperationEl.textContent.length > 9) {
     currentOperationEl.style.fontSize = "2rem";
   }
-  if (currentOperationEl.textContent.length > 15) {
-    currentOperationEl.textContent = currentOperationEl.textContent.slice(0,-1);
-  }
+
   // When user enters more than
   if (clickedKey === '*' || clickedKey === '+' || clickedKey === '-' || clickedKey === '/' || clickedKey === '=') {
 
