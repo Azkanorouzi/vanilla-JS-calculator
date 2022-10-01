@@ -1,11 +1,11 @@
-![preview](screenShot.png)
+![preview](ScreenShot.png)
 
 ## Hello! 👋
 
 Hello world this is me Azka.
 This is a simple vanilla js calculator which is built without eval() and it respects mathematical precedence.
 
-live preview -> https://azkanorouzi.github.io/Etch-A-sketch/
+live preview -> https://azkanorouzi.github.io/vanilla-JS-calculator/
 
 ## Features.
 
