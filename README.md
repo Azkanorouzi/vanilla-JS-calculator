@@ -1,4 +1,4 @@
-![preview](./ScreenShot.png)
+![preview](assets/ScreenShot.png)
 
 ## Hello! 👋
 
@@ -19,7 +19,6 @@ With this calculator you are able to:
 - Clear and delete.
 
 ## Side notes 
-
-1 - This calculator does not use eval() function.
-2 - It's responsive for all different display sizes
-3 - It has three themes you can choose from.
+- This calculator does not use eval() function.
+- It's responsive for all different display sizes
+- It has three themes you can choose from.
