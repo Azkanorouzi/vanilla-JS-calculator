@@ -157,6 +157,7 @@ main {
   width: 20px;
   height: 100%;
   border-radius: 50%;
+  cursor: pointer;
 }
 .slider.main-theme {
   background: var(--main-key-assign-slider);
@@ -317,4 +318,8 @@ main {
   .calc-keyboard.tertiary-theme>.key:active {
     background: var(--tertiary-button-active);
   }
+}
+/* Transition */
+.sec-theme,.main-theme,.tertiary-theme {
+  transition: .5s;
 }
