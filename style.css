@@ -26,38 +26,41 @@ body {
   /* Text color */
   --default-text-color: hsl(0, 0%, 100%);
   /* First theme */
-  --main-background: hsl(222, 26%, 31%);
-  --main-toggle-keypad: hsl(223, 31%, 20%);
-  --main-screen: hsl(224, 36%, 15%);
-  --main-key: hsl(30, 25%, 89%);
-  --main-key-shadow:hsl(28, 16%, 65%);
+  --main-background: hsl(229, 100%, 15%);
+  --main-toggle-keypad: hsla(337, 100%, 50%, 0.477);
+  --main-screen: hsl(330, 71%, 26%);
+  --main-key: hsl(241, 98%, 24%);
+  --main-key-shadow:hsl(241, 98%, 10%);
   --main-key-assign-slider: hsl(6, 63%, 50%);
   --main-key-assign-slider-shadow:hsl(6, 70%, 34%);
-  --main-key-reset-del: hsl(225, 21%, 49%);
-  --main-key-reset-del-shadow:hsl(224, 28%, 35%);
-  --main-button-text: hsl(221, 14%, 31%);
+  --main-key-reset-del: hsl(269, 98%, 33%);
+  --main-key-reset-del-shadow:hsl(269, 98%, 20%);
+  --main-button-text: hsl(42, 100%, 47%);
+  --main-button-active:rgb(255, 0, 102);
   /* Secondary theme */
-  --sec-background: hsl(0, 0%, 90%);
-  --sec-toggle-keypad: hsl(0, 5%, 81%);
-  --sec-screen: hsl(0, 0%, 93%);
-  --sec-key: hsl(45, 7%, 89%);
-  --sec-key-shadow:hsl(35, 11%, 61%);
-  --sec-key-assign-slider: hsl(25, 98%, 40%);
-  --sec-key-assign-slider-shadow:hsl(25, 99%, 27%);
-  --sec-key-reset-del: hsl(185, 42%, 37%);
-  --sec-key-reset-del-shadow:hsl(185, 58%, 25%);
-  --sec-button-text: hsl(60, 10%, 19%);
+  --sec-background: hsl(345, 90%, 20%);
+  --sec-toggle-keypad: hsl(41, 100%, 32%);
+  --sec-screen: hsl(41, 100%, 32%);
+  --sec-key: hsl(0, 0%, 80%);
+  --sec-key-shadow:hsl(0, 0%, 50%);
+  --sec-key-assign-slider: hsl(0, 95%, 40%);
+  --sec-key-assign-slider-shadow:hsl(0, 95%, 30%);
+  --sec-key-reset-del: hsl(40, 100%, 55%);
+  --sec-key-reset-del-shadow:hsl(46, 65%, 40%);
+  --sec-button-text: hsl(0, 95%, 42%);
+  --sec-button-active:rgb(94, 0, 0);
   /* tertiary theme */
-  --tertiary-background: hsl(268, 75%, 9%);
-  --tertiary-toggle-keypad: hsl(268, 71%, 12%);
-  --tertiary-screen: hsl(268, 71%, 12%);
-  --tertiary-key: hsl(268, 47%, 21%);
-  --tertiary-key-shadow:hsl(290, 70%, 36%);
-  --tertiary-key-assign-slider: hsl(176, 100%, 44%);
-  --tertiary-key-assign-slider-shadow:hsl(177, 92%, 70%);
-  --tertiary-key-reset-del: hsl(281, 89%, 26%);
-  --tertiary-key-reset-del-shadow:hsl(285, 91%, 52%);
-  --tertiary-button-text: hsl(52, 100%, 62%);
+  --tertiary-background: hsl(155, 88%, 20%);
+  --tertiary-toggle-keypad: hsl(120, 82%, 30%);
+  --tertiary-screen: hsl(120, 82%, 30%);
+  --tertiary-key: hsl(150, 82%, 20%);
+  --tertiary-key-shadow:hsl(156, 100%, 11%);
+  --tertiary-key-assign-slider: hsl(76, 94%, 49%);
+  --tertiary-key-assign-slider-shadow:hsl(73, 60%, 28%);
+  --tertiary-key-reset-del: hsl(47, 94%, 33%);
+  --tertiary-key-reset-del-shadow:hsl(47, 94%, 20%);
+  --tertiary-button-text: hsl(129, 100%, 8%);
+  --tertiary-button-active:hsl(120, 100%, 50%);
   /* Font size */
 }
 /* ======= main ======= */
@@ -91,11 +94,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
-  width: 90vw;
+  width: 95vw;
   max-width: 500px; 
   background: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 15px;
+  box-shadow: 0px 10px 0px 0px black;
 }
 /* ======= Calc header  ======= */
 .calculator-header {
@@ -166,7 +170,7 @@ main {
 /* ======= Screen ======= */
 .calc-screen {
   width: 100%;
-  height: 120px;
+  height: 100px;
   border-radius: 10px;
   background: var(--main-);
   padding: 1.5rem;
@@ -225,6 +229,7 @@ main {
   font-size: 34px;
   border: none;
   font-weight: 700;
+  transition:  background .2s, box-shadow .1s;
 }
 /* key reset */
 .key-reset {
@@ -292,4 +297,24 @@ main {
   color: var(--tertiary-background);
   background: var(--tertiary-key-assign-slider);
     box-shadow: 0px 5px 0px 0px var(--tertiary-key-assign-slider-shadow);
+}
+/* ======== Hover Effects ========*/
+@media (hover:hover) {
+  .calc-keyboard>.key:hover {
+    transform: scale(.96);
+  }
+  .calc-keyboard>.key:active {
+    transform: scale(.93);
+    opacity: .8;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .calc-keyboard.main-theme>.key:active {
+    background: var(--main-button-active);
+  }
+  .calc-keyboard.sec-theme>.key:active {
+    background: var(--sec-button-active);
+  }
+  .calc-keyboard.tertiary-theme>.key:active {
+    background: var(--tertiary-button-active);
+  }
 }
